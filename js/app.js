@@ -35,7 +35,8 @@
         .factory('gettEr', function ($http, $window) {
             return {
                 serverJson: function (fileLocation, fileName) {
-                    return $http.get('../multiView/' + fileLocation + '/' + fileName + '.json')
+                    //return $http.get('../multiView/' + fileLocation + '/' + fileName + '.json')
+                    return $http.get('../' + fileLocation + '/' + fileName + '.json')
                 },
                 localJson: function (storageName) {
                     jsonInfo = $window.localStorage && $window.localStorage.getItem(storageName);
