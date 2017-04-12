@@ -1,5 +1,7 @@
 (function () {
     var app = angular.module('toDoList', []);
+    var clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    var listHeight = clientHeight - 128;
 
     //directive to link list html template
     app.directive('list', function () {
@@ -84,7 +86,11 @@
             }
         });
 
-    app.controller('panelController', function () {
+    app.controller('panelController', function ($scope) {
+            $scope.getHeight = {
+                "height": listHeight + "px"
+            }
+
             this.tab = 1;
 
             this.selectTab = function (tabSelected) {

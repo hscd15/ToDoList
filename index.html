@@ -16,7 +16,7 @@
     <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
     
     <!-- Css -->
     <link href="css/app.css" rel="stylesheet" type="text/css">
@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <h1><span>My Lists</span></h1>
+        <h1>My Lists</h1>
     </header>
 
     <section ng-controller="panelController as panel" ng-init="tab = 1">
@@ -35,15 +35,15 @@
             <a href ng-click="panel.selectTab(3)">Chores</a>
         </nav>
 
-        <div class="panel" ng-show="panel.isSelected(1)">
+        <div class="panel" ng-show="panel.isSelected(1)" ng-style="getHeight">
             <list ng-controller="workController as list"></list>
         </div>
 
-        <div class="panel" ng-show="panel.isSelected(2)">
+        <div class="panel" ng-show="panel.isSelected(2)" ng-style="getHeight">
             <list ng-controller="groceriesController as list"></list>
         </div>
 
-        <div class="panel" ng-show="panel.isSelected(3)">
+        <div class="panel" ng-show="panel.isSelected(3)" ng-style="getHeight">
             <list ng-controller="choresController as list"></list>
         </div>
 
