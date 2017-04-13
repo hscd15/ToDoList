@@ -106,6 +106,9 @@ input[type="text"] {
 }
 
 input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 40%;
     height: 40px;
     border: none;
