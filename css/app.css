@@ -106,9 +106,6 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     width: 40%;
     height: 40px;
     border: none;
@@ -121,6 +118,11 @@ input[type="submit"] {
 }
 
 input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
     outline: none
 }
 
